@@ -17,14 +17,14 @@ class LocationPing(BaseModel):
 
     @field_validator('lat')
     @classmethod
-    def validate_lat(csl, val):
+    def validate_lat(cls, val):
         if val < -90 or val > 90:
             raise ValueError("Latitude is not valid")
         return val
 
     @field_validator('long')
     @classmethod
-    def validate_lat(csl, val):
+    def validate_long(cls, val):
         if val < -180 or val > 180:
             raise ValueError("Longitude is not valid")
         return val

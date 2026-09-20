@@ -18,4 +18,4 @@ class Trip(BaseModel):
     def validate_trip_time(self) -> datetime:
         if self.end_time < self.start_time:
             raise ValueError("Trip end time is invalid.")
-        return self.start_time, self.end_time
+        return self

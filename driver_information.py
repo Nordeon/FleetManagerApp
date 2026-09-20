@@ -1,6 +1,8 @@
 from pydantic import BaseModel
-from typing import Optional
 
 class DriverInformation(BaseModel):
+    """
+        needs to validate driver_id against existing IDs, spaces, and symbols
+    """
+    driver_id: str
     driver_name: str
-    vehicle_id: str
